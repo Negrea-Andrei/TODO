@@ -10,6 +10,10 @@ body {
 
 header {
     width: 100%;
+    height: 5%;
     background-color: rgb(219, 76, 63, 1);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
 }
