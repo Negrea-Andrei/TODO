@@ -10,10 +10,27 @@ body {
 
 header {
     width: 100%;
-    height: 5%;
-    background-color: rgb(219, 76, 63, 1);
+    height: 10%;
+    background-color: #1F31D6;
+    color: #ABB3F7;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+    font-size: 3rem;
+}
+
+.content {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav {
+    background-color: #091540;
+    width: 25%;
+}
+
+.projects {
+    background-color: #ABD2FA;
+    width: 75%;
 }
