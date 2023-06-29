@@ -30,7 +30,7 @@ header {
     background-color: #091540;
     color: #576fc7;
     width: 25%;
-    font-size: x-large;
+    font-size: clamp(1.1rem, 2vw, 2.5rem);
     padding: 3% 2% 0% 2%;
     display: flex;
     flex-direction: column;
