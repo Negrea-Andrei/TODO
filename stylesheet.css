@@ -27,10 +27,17 @@ header {
 
 .nav {
     background-color: #091540;
+    color: #576fc7de;
     width: 25%;
+    font-size: x-large;
+    padding: 3% 2% 2% 2%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: repeat(5, 15%);
 }
 
 .projects {
     background-color: #ABD2FA;
+    overflow-y: scroll;
     width: 75%;
 }
