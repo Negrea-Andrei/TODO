@@ -20,6 +20,13 @@ header {
     font-size: 3rem;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .content {
     height: 90%;
     display: flex;
