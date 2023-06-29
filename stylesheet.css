@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -30,10 +31,28 @@ header {
     color: #576fc7;
     width: 25%;
     font-size: x-large;
-    padding: 3% 2% 2% 2%;
+    padding: 3% 2% 0% 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-work {
+    height: 50%;
     display: grid;
-    grid-template-columns: 35% 65%;
-    grid-template-rows: repeat(5, 5%);
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: repeat(3, 10%);
+    gap: 25px;
+}
+
+.info {
+    height: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: repeat(2, 10%);
     gap: 25px;
 }
 
