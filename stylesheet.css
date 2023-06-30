@@ -70,8 +70,11 @@ footer {
     width: 75%;
 }
 
-.home, .new-project, .my-projects, .settings, .about {
+.home:hover, .new-project:hover, .my-projects:hover, .settings:hover, .about:hover {
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    scale: 1.05;
+    color: rgb(255, 128, 128);
 }
 
 img {
