@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This application will be a OTDO list made using HTML, CSS, JS and Webpack",
   "main": "index.js",
+  "private":"true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
