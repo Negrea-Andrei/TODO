@@ -51,7 +51,7 @@ footer {
     justify-content: center;
     align-items: center;
     grid-template-columns: 25% 75%;
-    grid-template-rows: repeat(3, 10%);
+    grid-template-rows: repeat(3, 9%);
     gap: 25px;
     overflow-wrap:normal;
 }
@@ -62,7 +62,7 @@ footer {
     justify-content: center;
     align-items: center;
     grid-template-columns: 25% 75%;
-    grid-template-rows: repeat(2, 10%);
+    grid-template-rows: repeat(2, 9%);
     gap: 25px;
 }
 
@@ -92,13 +92,12 @@ img {
 h1 {
     width: max-content;
     margin-top: 5%;
-    margin-bottom: 5%;
     font-size: clamp(0.8rem, 5vw, 3rem);
-    text-decoration: underline blue 3px;
+    text-decoration: underline rgba(0, 0, 255, 0.493) 3px;
 }
 
-.description {
+p {
     width: 80%;
-    font-size: clamp(1rem, 2vw, 4rem);
-    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 4rem);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
