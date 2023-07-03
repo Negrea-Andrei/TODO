@@ -101,3 +101,11 @@ p {
     font-size: clamp(1rem, 1.5vw, 4rem);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.container-project {
+    width: clamp(200px, 40%, 100vw);
+    height: 80%;
+    background-color: #d8dcff;
+    border-radius: 15px;
+    border: solid 5px rgba(0, 0, 255, 0.493);
+}
