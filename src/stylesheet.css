@@ -104,8 +104,10 @@ p {
 
 .container-project {
     width: clamp(200px, 40%, 100vw);
-    height: 80%;
+    height: 75%;
     background-color: #d8dcff;
     border-radius: 15px;
     border: solid 5px rgba(0, 0, 255, 0.493);
+    padding-left: 5%;
+    padding-top: 2%;
 }
