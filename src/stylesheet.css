@@ -118,6 +118,6 @@ p {
 }
 
 .project_priority {
-    width: 15%;
+    width: clamp(40px, 10%, 200px);
     height: 5%;
 }
