@@ -46,7 +46,7 @@ footer {
 }
 
 .container-work {
-    height: 50%;
+    height: clamp(500px, 50%, 50%) ;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ footer {
 }
 
 .info {
-    height: 50%;
+    height: clamp(500px, 50%, 50%);
     display: grid;
     justify-content: center;
     align-items: center;
@@ -110,6 +110,7 @@ p {
     border: solid 5px rgba(0, 0, 255, 0.493);
     padding-left: 5%;
     padding-top: 2%;
+    overflow: hidden;
 }
 
 .project_description {
@@ -120,4 +121,13 @@ p {
 .project_priority {
     width: clamp(40px, 10%, 200px);
     height: 5%;
+}
+
+.project_priority, .project_description, .project_date, .project_place {
+    margin-bottom: 25px;
+}
+
+.create_project_button {
+    width: 150px;
+    height: 35px;
 }
