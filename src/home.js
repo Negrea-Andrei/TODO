@@ -1,5 +1,6 @@
 function welcome() {
     let container = document.querySelector('.projects');
+    container.innerHTML = "";
 
     let title = document.createElement('h1');
     title.innerHTML = "WELCOME!";
