@@ -1,3 +1,5 @@
 import welcome from "./home";
 
-const container = document.querySelector('.projects');
+function newProject() {
+    const container = document.querySelector('.projects');
+}
