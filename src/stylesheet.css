@@ -196,5 +196,7 @@ p {
     align-self: flex-end;
     width: clamp(35px, 7%, 7%);
     height: clamp(15px, 2vh, 2vh);
-    font-size: clamp(5px, 0.7vw, 0.7vw) ;
+    font-size: clamp(5px, 0.7vw, 0.7vw);
+    border: #2f4592 solid 2px;
+    background-color: #2b93fc;
 }
