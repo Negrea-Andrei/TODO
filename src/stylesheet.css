@@ -141,23 +141,60 @@ p {
 }
 
 .project_card {
-    width: clamp(200px, 50%, 50%);
+    width: clamp(170px, 75%, 75%);
     border-radius: 15px;
     border: 2px solid #091540;
-    height: 250px;
+    height: 200px;
     background-color: #69b2fc;
     margin-top: 25px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1% 1% 1% 1%;
+}
+
+.project_card_header {
+    text-align: center;
 }
 
 .test {
     width: 50%;
+    background-color:#9ecdfc;
+    border: 2px solid #58a9fa;
+    border-radius: 15px;
     margin-top: 15px;
     display: flex;
     flex-direction: row;
-    align-items: space-between;
+    align-items:center;
     justify-content: space-between;
+    padding: 0px 5px 0px 5px;
+    font-size: clamp(13px, 1vw, 1vw);    
+}
+
+.project_card_name {
+    font-size: clamp(15px, 2vw, 2vw);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.project_card_description {
+    font-size: clamp(8px, 1vw, 1vw);
+}
+
+.project_card_priority {
+    font-size: clamp(7px, 1vw, 1vw);
+    font-weight: 600;
+}
+
+.project_card_date {
+    font-size: clamp(7px, 1vw, 1vw);
+    font-weight: 600;
+}
+
+.button_task {
+    align-self: flex-end;
+    width: clamp(35px, 7%, 7%);
+    height: clamp(15px, 2vh, 2vh);
+    font-size: clamp(5px, 0.7vw, 0.7vw) ;
 }
