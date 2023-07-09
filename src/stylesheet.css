@@ -198,5 +198,10 @@ p {
     height: clamp(15px, 2vh, 2vh);
     font-size: clamp(5px, 0.7vw, 0.7vw);
     border: #2f4592 solid 2px;
-    background-color: #2b93fc;
+    background-color: #38f2ff;
+}
+
+.button_task:hover {
+    cursor: pointer;
+    background-color: #ABB3F7;
 }
