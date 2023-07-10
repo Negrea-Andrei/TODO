@@ -53,9 +53,8 @@ function newProject() {
     const description = document.createElement('div');
     description.innerHTML = "Description";
 
-    const inputDescription = document.createElement('input');
+    const inputDescription = document.createElement('textarea');
     inputDescription.className = "project_description";
-    inputDescription.type = "text";
 
     const priority = document.createElement('div');
     priority.innerHTML = "Priority"

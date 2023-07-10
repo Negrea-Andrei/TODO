@@ -115,7 +115,8 @@ p {
 
 .project_description {
     width: 80%;
-    height: 35%;
+    height: 15%;
+    font-size: x-large;
 }
 
 .project_priority {
