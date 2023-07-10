@@ -4,8 +4,36 @@ import welcome from "./home";
 const newProjectButton = document.querySelector(".new-project");
 const homePage = document.querySelector('.home');
 
+const projectList = {
+    list: []
+}
+
+//!Object constructor for the projects
+const projectCard = (title, description, priority, date) => {
+    title: title;
+    description: description;
+    priority: priority;
+    date: date;
+    let tasks = [];
+
+    return {title, description, priority, date, tasks}
+}
+
 
 function newProject() {
+
+
+    function createProject() {
+        const project = projectCard(inputTitle.value, inputDescription.value, inputPriority.value, inputDate.value);
+        inputTitle.value = '';
+        inputDescription.value = '';
+        inputPriority.value = '';
+        inputDate.value = '';
+        projectList.list.push(project);
+        console.log(projectList.list)
+    }
+
+
     const container = document.querySelector('.projects');
     container.innerHTML = "";
 
@@ -15,12 +43,12 @@ function newProject() {
     const containerForm = document.createElement('div');
     containerForm.className = "container-project";
 
-    const place = document.createElement('div');
-    place.innerHTML = "Place";
+    const title = document.createElement('div');
+    title.innerHTML = "Title";
 
-    const inputPlace = document.createElement('input');
-    inputPlace.className = "project_place";
-    inputPlace.type = "text";
+    const inputTitle = document.createElement('input');
+    inputTitle.className = "project_place";
+    inputTitle.type = "text";
 
     const description = document.createElement('div');
     description.innerHTML = "Description";
@@ -75,8 +103,8 @@ function newProject() {
     buttonAdd.className = "create_project_button";
     buttonAdd.innerHTML = "Click here";
 
-    containerForm.appendChild(place);
-    containerForm.appendChild(inputPlace);
+    containerForm.appendChild(title);
+    containerForm.appendChild(inputTitle);
     containerForm.appendChild(description);
     containerForm.appendChild(inputDescription);
     containerForm.appendChild(priority);
@@ -88,6 +116,7 @@ function newProject() {
 
     container.appendChild(header);
     container.appendChild(containerForm);
+    buttonAdd.addEventListener('click', createProject)
 }
 
 newProjectButton.addEventListener("click", newProject);
