@@ -117,6 +117,7 @@ p {
     width: 80%;
     height: 15%;
     font-size: x-large;
+    resize: none;
 }
 
 .project_priority {
@@ -126,6 +127,16 @@ p {
 
 .project_priority, .project_description, .project_date, .project_place {
     margin-bottom: 25px;
+}
+
+.project_place {
+    width: 50%;
+    resize: none;
+}
+
+.project_date {
+    width: auto;
+
 }
 
 .create_project_button {
@@ -200,7 +211,7 @@ p {
 .button_task {
     align-self: flex-end;
     width: clamp(35px, 7%, 7%);
-    height: clamp(15px, 2vh, 2vh);
+    height: clamp(15px, 3vh, 3vh);
     font-size: clamp(5px, 0.7vw, 0.7vw);
     border: #2f4592 solid 2px;
     background-color: #38f2ff;

@@ -92,7 +92,7 @@ function newProject() {
     date.innerHTML = "Due date";
 
     const inputDate = document.createElement("input");
-    inputDate.className = "project_priority";
+    inputDate.className = "project_date";
     inputDate.type = "date";
 
     const button = document.createElement("div");
