@@ -180,6 +180,10 @@ p {
 
 .project_card_description {
     font-size: clamp(8px, 1vw, 1vw);
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #9dd8ff;
+    border: 2px solid;
 }
 
 .project_card_priority {
