@@ -118,5 +118,11 @@ function newProject() {
     buttonAdd.addEventListener('click', createProject)
 }
 
+function displayProjects() {
+    for(let i = 0; i < projectList.list.length; i++) {
+        
+    }
+}
+
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
