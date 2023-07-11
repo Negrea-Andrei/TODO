@@ -194,7 +194,7 @@ p {
     font-size: clamp(8px, 1vw, 1vw);
     width: 70%;
     overflow-wrap: break-word;
-    overflow: scroll;
+    overflow-y: scroll;
     padding: 5px;
     border-radius: 10px;
     background-color: #9dd8ff;
