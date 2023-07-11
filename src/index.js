@@ -3,9 +3,10 @@ import welcome from "./home";
 
 const newProjectButton = document.querySelector(".new-project");
 const homePage = document.querySelector('.home');
+const projectDisplayButton = document.querySelector('.my-projects')
 
 const projectList = {
-    list: []
+    list: []    
 }
 
 //!Object constructor for the projects
@@ -119,10 +120,58 @@ function newProject() {
 }
 
 function displayProjects() {
+    const projects = document.querySelector('.projects');;
+    projects.innerHTML = "";
+    const headerProject = document.createElement('h2');
+    headerProject.className= 'project_card_header';
+    headerProject.innerHTML = "The projects will appear here";
+
+    projects.appendChild(headerProject)
+
+    const cardsContainer = document.createElement('div');
+    cardsContainer.className = 'project_card_container'
     for(let i = 0; i < projectList.list.length; i++) {
+        const card = document.createElement('div');
+        card.className = "project_card"
+
+        const projectHeader = document.createElement('div');
+        projectHeader.className = "project_card_name";
+        projectHeader.innerHTML = projectList.list[i].title;
+
+        const projectDescription = document.createElement('div');
+        projectDescription.className = "project_card_description";
+        projectDescription.innerHTML = projectList.list[i].description;
+
+        const test = document.createElement('div');
+        test.className = "test"
+
+        const projectPriority = document.createElement('div');
+        projectPriority.className = "project_card_priority";
+        projectPriority.innerHTML = `Priority: ${projectList.list[i].priority}`;
+
+        const projectDate = document.createElement('div');
+        projectDate.className = "project_card_date";
+        projectDate.innerHTML = `Due date: ${projectList.list[i].date}`;
+
+        test.appendChild(projectPriority);
+        test.appendChild(projectDate);
+
+        const projectButton = document.createElement('button');
+        projectButton.className = "button_task";
+        projectButton.innerHTML = "Add task";
+
+        card.appendChild(projectHeader);
+        card.appendChild(projectDescription);
+        card.appendChild(test);
+        card.appendChild(projectButton);
         
+        cardsContainer.appendChild(card);
+        
+        projects.appendChild(cardsContainer)
     }
+    
 }
 
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
+projectDisplayButton.addEventListener('click', displayProjects);

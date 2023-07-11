@@ -153,7 +153,7 @@ p {
 }
 
 .project_card {
-    width: clamp(170px, 75%, 75%);
+    width: clamp(170px, 60%, 60%);
     border-radius: 15px;
     border: 2px solid #091540;
     height: 200px;
@@ -192,6 +192,9 @@ p {
 
 .project_card_description {
     font-size: clamp(8px, 1vw, 1vw);
+    width: 70%;
+    overflow-wrap: break-word;
+    overflow: scroll;
     padding: 5px;
     border-radius: 10px;
     background-color: #9dd8ff;
@@ -210,7 +213,7 @@ p {
 
 .button_task {
     align-self: flex-end;
-    width: clamp(35px, 7%, 7%);
+    width: clamp(35px, 9%, 9%);
     height: clamp(15px, 3vh, 3vh);
     font-size: clamp(5px, 0.7vw, 0.7vw);
     border: #2f4592 solid 2px;
