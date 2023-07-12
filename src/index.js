@@ -175,3 +175,5 @@ function displayProjects() {
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
 projectDisplayButton.addEventListener('click', displayProjects);
+
+//Got home from Cluj at 9 PM
