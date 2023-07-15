@@ -212,8 +212,7 @@ p {
 }
 
 .button_task {
-    align-self: flex-end;
-    width: clamp(35px, 9%, 9%);
+    width: clamp(35px, 10%, 10%);
     height: clamp(15px, 3vh, 3vh);
     font-size: clamp(5px, 0.7vw, 0.7vw);
     border: #2f4592 solid 2px;
@@ -228,4 +227,25 @@ p {
 .task-list {
     display: flex;
     flex-direction: row;
+}
+
+.commands {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    height: 10%;
+}
+
+.delete-task {
+    width: clamp(35px, 10%, 10%);
+    height: clamp(15px, 3vh, 3vh);
+    font-size: clamp(5px, 0.7vw, 0.7vw);
+    border: #2f4592 solid 2px;
+    background-color: #ff3838;
+}
+
+.delete-task:hover {
+    cursor: pointer;
+    background-color: #ff7575;
 }
