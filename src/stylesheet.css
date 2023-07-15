@@ -229,6 +229,9 @@ p {
     flex-direction: column;
     width: 70%;
     justify-content: space-around;
+    background-color: #aed7ff;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 
 .task-input {
@@ -289,6 +292,7 @@ p {
 .element {
     margin-top: 5px;
     margin-bottom: 5px;
+    
 }
 
 .input-task {
