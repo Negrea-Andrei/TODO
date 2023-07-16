@@ -156,14 +156,42 @@ function displayProjects() {
         test.appendChild(projectPriority);
         test.appendChild(projectDate);
 
+        const commands = document.createElement("div");
+        commands.className = "commands";
+
+        const deleteProjectButton = document.createElement('button');
+        deleteProjectButton.className = "delete-task";
+        deleteProjectButton.innerHTML = "Delete";
+        commands.appendChild(deleteProjectButton);
+
         const projectButton = document.createElement('button');
         projectButton.className = "button_task";
-        projectButton.innerHTML = "Add task";
+        projectButton.innerHTML = "New task";
+        commands.appendChild(projectButton);
+
+        const taskZone = document.createElement('div');
+        taskZone.className = "task-container";
+
+        const taskZoneInputsPlace = document.createElement('div');
+        taskZoneInputsPlace.className = "task-input";
+
+        const taskZoneInput = document.createElement('input');
+        taskZoneInput.className = "input-task";
+        taskZoneInput.type = "text";
+        taskZoneInputsPlace.appendChild(taskZoneInput)
+
+        const taskZoneButton = document.createElement('button');
+        taskZoneButton.className = "new-task";
+        taskZoneButton.innerHTML = "Add";
+        taskZoneInputsPlace.appendChild(taskZoneButton);
+        
+        taskZone.appendChild(taskZoneInputsPlace)
 
         card.appendChild(projectHeader);
         card.appendChild(projectDescription);
         card.appendChild(test);
-        card.appendChild(projectButton);
+        card.appendChild(commands);
+        card.appendChild(taskZone);
         
         cardsContainer.appendChild(card);
         
