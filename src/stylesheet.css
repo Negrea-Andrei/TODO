@@ -228,6 +228,7 @@ p {
     display: flex;
     flex-direction: column;
     width: 70%;
+    height: fit-content;
     justify-content: space-around;
     background-color: #aed7ff;
     border: 2px solid black;
@@ -237,7 +238,7 @@ p {
 .task-input {
     margin-top: 15px;
     width: 80%;
-    height: 8%;
+    height: clamp(8%, 45px, 50px);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

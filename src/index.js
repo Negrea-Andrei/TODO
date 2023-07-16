@@ -185,7 +185,12 @@ function displayProjects() {
         taskZoneButton.innerHTML = "Add";
         taskZoneInputsPlace.appendChild(taskZoneButton);
         
-        taskZone.appendChild(taskZoneInputsPlace)
+        taskZone.appendChild(taskZoneInputsPlace);
+
+        const listZone = document.createElement('ol');
+        listZone.className = "task-list";
+
+        taskZone.appendChild(listZone)
 
         card.appendChild(projectHeader);
         card.appendChild(projectDescription);
