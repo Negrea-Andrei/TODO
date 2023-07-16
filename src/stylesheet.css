@@ -225,7 +225,7 @@ p {
 }
 
 .task-list {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 70%;
     height: fit-content;
