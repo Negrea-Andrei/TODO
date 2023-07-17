@@ -6,7 +6,9 @@ const homePage = document.querySelector('.home');
 const projectDisplayButton = document.querySelector('.my-projects')
 
 const projectList = {
-    list: []    
+    list: [],
+    deleteButtons: [],
+    newTaskButtonsList: [],
 }
 
 //!Object constructor for the projects
@@ -202,11 +204,12 @@ function displayProjects() {
         
         projects.appendChild(cardsContainer)
     }
-    
+
+    const deleteButtonsList = document.querySelectorAll('.delete-task');
+    projectList.deleteButtons = [...deleteButtonsList];   
 }
 
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
 projectDisplayButton.addEventListener('click', displayProjects);
 
-//Got home from Cluj at 9 PM
