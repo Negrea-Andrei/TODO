@@ -206,7 +206,10 @@ function displayProjects() {
     }
 
     const deleteButtonsList = document.querySelectorAll('.delete-task');
-    projectList.deleteButtons = [...deleteButtonsList];   
+    projectList.deleteButtons = [...deleteButtonsList];
+    
+    const addTasksList = document.querySelectorAll('.button_task');
+    projectList.newTaskButtonsList = [...addTasksList];
 }
 
 newProjectButton.addEventListener("click", newProject);
