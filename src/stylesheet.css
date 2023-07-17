@@ -152,11 +152,12 @@ p {
     align-items: center;
 }
 
+
 .project_card {
     width: clamp(170px, 60%, 60%);
     border-radius: 15px;
     border: 2px solid #091540;
-    height: 300px;
+    height: 200px;/*300px*/ 
     background-color: #69b2fc;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -164,7 +165,7 @@ p {
     flex-direction: column;
     align-items: center;
     padding: 1% 1% 1% 1%;
-    overflow-y: scroll;
+    overflow-y: none; /*scroll*/
 }
 
 .project_card_header {
@@ -239,7 +240,7 @@ p {
     margin-top: 15px;
     width: 80%;
     height: clamp(8%, 45px, 50px);
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-evenly;
 }
