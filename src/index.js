@@ -213,7 +213,8 @@ function displayProjects() {
 }
 
 function deletingProjects(number) {
-    projectList.list.pop(number);    
+    projectList.list.pop(number);
+    displayProjects();    
 }
 
 newProjectButton.addEventListener("click", newProject);
