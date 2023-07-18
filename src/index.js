@@ -212,6 +212,10 @@ function displayProjects() {
     projectList.newTaskButtonsList = [...addTasksList];
 }
 
+function deletingProjects(number) {
+    projectList.list.pop(number);    
+}
+
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
 projectDisplayButton.addEventListener('click', displayProjects);
