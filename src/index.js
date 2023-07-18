@@ -13,13 +13,16 @@ const projectList = {
 
 //!Object constructor for the projects
 const projectCard = (title, description, priority, date) => {
-    title: title;
-    description: description;
-    priority: priority;
-    date: date;
+
     let tasks = [];
 
-    return {title, description, priority, date, tasks}
+    return {
+        title: title,
+        description: description,
+        priority: priority,
+        date: date,
+        tasks: tasks,
+    }
 }
 
 
@@ -125,14 +128,14 @@ function displayProjects() {
     const projects = document.querySelector('.projects');;
     projects.innerHTML = "";
     const headerProject = document.createElement('h2');
-    headerProject.className= 'project_card_header';
+    headerProject.className = 'project_card_header';
     headerProject.innerHTML = "The projects will appear here";
 
     projects.appendChild(headerProject)
 
     const cardsContainer = document.createElement('div');
     cardsContainer.className = 'project_card_container'
-    for(let i = 0; i < projectList.list.length; i++) {
+    for (let i = 0; i < projectList.list.length; i++) {
         const card = document.createElement('div');
         card.className = "project_card"
 
@@ -186,7 +189,7 @@ function displayProjects() {
         taskZoneButton.className = "new-task";
         taskZoneButton.innerHTML = "Add";
         taskZoneInputsPlace.appendChild(taskZoneButton);
-        
+
         taskZone.appendChild(taskZoneInputsPlace);
 
         const listZone = document.createElement('ol');
@@ -199,25 +202,35 @@ function displayProjects() {
         card.appendChild(test);
         card.appendChild(commands);
         card.appendChild(taskZone);
-        
+
         cardsContainer.appendChild(card);
-        
+
         projects.appendChild(cardsContainer)
     }
 
     const deleteButtonsList = document.querySelectorAll('.delete-task');
-    projectList.deleteButtons = [...deleteButtonsList];
-    
+    for(let i = 0; i < deleteButtonsList.length; i++){
+        projectList.deleteButtons.push(deleteButtonsList[i])
+    }    
+
     const addTasksList = document.querySelectorAll('.button_task');
     projectList.newTaskButtonsList = [...addTasksList];
+
+    projectList.deleteButtons.forEach(button =>
+    button.addEventListener('click', () => deletingProjects(projectList.deleteButtons.indexOf(button)))
+);
+
 }
 
 function deletingProjects(number) {
-    projectList.list.pop(number);
-    displayProjects();    
-}
+        projectList.list.splice(number, 1);
+        displayProjects();
+    }
+
 
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
 projectDisplayButton.addEventListener('click', displayProjects);
+
+
 
