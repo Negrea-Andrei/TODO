@@ -174,6 +174,8 @@ function displayProjects() {
         projectButton.innerHTML = "New task";
         commands.appendChild(projectButton);
 
+        deleteProjectButton.addEventListener('click', () => deletingProjects(i));
+
         const taskZone = document.createElement('div');
         taskZone.className = "task-container";
 
@@ -208,23 +210,12 @@ function displayProjects() {
         projects.appendChild(cardsContainer)
     }
 
-    const deleteButtonsList = document.querySelectorAll('.delete-task');
-    for(let i = 0; i < deleteButtonsList.length; i++){
-        projectList.deleteButtons.push(deleteButtonsList[i])
-    }    
-
-    const addTasksList = document.querySelectorAll('.button_task');
-    projectList.newTaskButtonsList = [...addTasksList];
-
-    projectList.deleteButtons.forEach(button =>
-    button.addEventListener('click', () => deletingProjects(projectList.deleteButtons.indexOf(button)))
-);
-
 }
 
 function deletingProjects(number) {
         projectList.list.splice(number, 1);
         displayProjects();
+        console.log('click')
     }
 
 
