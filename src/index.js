@@ -212,28 +212,28 @@ function displayProjects() {
 }
 
 function deletingProjects(number) {
-        projectList.list.splice(number, 1);
-        displayProjects();
-        console.log('click')
-    }
+    projectList.list.splice(number, 1);
+    displayProjects();
+    console.log('click')
+}
 
-    function displayTasks(number) {
-        const projectCard = document.getElementsByClassName('project_card')[number];
-        const taskZone = projectCard.querySelector('.task-container');
-        const taskInput = projectCard.querySelector('.task-input');
-        const taskList = taskZone.querySelector('.task-list');
-    
-        if (projectCard.classList.contains('expanded')) {
-            projectCard.classList.remove('expanded');
-            taskInput.classList.remove('expanded')
-        } else {
-            projectCard.classList.add('expanded');
-            taskInput.classList.add('expanded')
-        }
-        taskZone.style.overflowY = 'scroll';
-    
-        console.log('click');
+function displayTasks(number) {
+    const projectCard = document.getElementsByClassName('project_card')[number];
+    const taskZone = projectCard.querySelector('.task-container');
+    const taskInput = projectCard.querySelector('.task-input');
+    const taskList = taskZone.querySelector('.task-list');
+
+    if (projectCard.classList.contains('expanded')) {
+        projectCard.classList.remove('expanded');
+        taskInput.classList.remove('expanded')
+    } else {
+        projectCard.classList.add('expanded');
+        taskInput.classList.add('expanded')
     }
+    taskZone.style.overflowY = 'scroll';
+
+    console.log('click');
+}
 
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
