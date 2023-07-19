@@ -168,6 +168,10 @@ p {
     overflow-y: none; /*scroll*/
 }
 
+.project_card.expanded {
+    height: 300px;
+  }
+
 .project_card_header {
     text-align: center;
 }
@@ -236,6 +240,10 @@ p {
     border-radius: 15px;
 }
 
+.task-list.expanded {
+    display: flex;
+}
+
 .task-input {
     margin-top: 15px;
     width: 80%;
@@ -243,6 +251,10 @@ p {
     display: none;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.task-input.expanded {
+    display: flex;
 }
 
 .new-task {

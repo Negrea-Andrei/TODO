@@ -6,9 +6,7 @@ const homePage = document.querySelector('.home');
 const projectDisplayButton = document.querySelector('.my-projects')
 
 const projectList = {
-    list: [],
-    deleteButtons: [],
-    newTaskButtonsList: [],
+    list: []
 }
 
 //!Object constructor for the projects
@@ -175,6 +173,7 @@ function displayProjects() {
         commands.appendChild(projectButton);
 
         deleteProjectButton.addEventListener('click', () => deletingProjects(i));
+        projectButton.addEventListener('click', () => displayTasks(i));
 
         const taskZone = document.createElement('div');
         taskZone.className = "task-container";
@@ -218,6 +217,23 @@ function deletingProjects(number) {
         console.log('click')
     }
 
+    function displayTasks(number) {
+        const projectCard = document.getElementsByClassName('project_card')[number];
+        const taskZone = projectCard.querySelector('.task-container');
+        const taskInput = projectCard.querySelector('.task-input');
+        const taskList = taskZone.querySelector('.task-list');
+    
+        if (projectCard.classList.contains('expanded')) {
+            projectCard.classList.remove('expanded');
+            taskInput.classList.remove('expanded')
+        } else {
+            projectCard.classList.add('expanded');
+            taskInput.classList.add('expanded')
+        }
+        taskZone.style.overflowY = 'scroll';
+    
+        console.log('click');
+    }
 
 newProjectButton.addEventListener("click", newProject);
 homePage.addEventListener("click", welcome);
