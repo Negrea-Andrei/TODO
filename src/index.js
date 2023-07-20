@@ -34,7 +34,6 @@ function newProject() {
         inputPriority.value = '';
         inputDate.value = '';
         projectList.list.push(project);
-        console.log(projectList.list)
     }
 
 
@@ -169,7 +168,7 @@ function displayProjects() {
 
         const projectButton = document.createElement('button');
         projectButton.className = "button_task";
-        projectButton.innerHTML = "New task";
+        projectButton.innerHTML = "See task";
         commands.appendChild(projectButton);
 
         deleteProjectButton.addEventListener('click', () => deletingProjects(i));
@@ -189,6 +188,8 @@ function displayProjects() {
         const taskZoneButton = document.createElement('button');
         taskZoneButton.className = "new-task";
         taskZoneButton.innerHTML = "Add";
+        taskZoneButton.addEventListener('click', () => displayTasksList(i))
+
         taskZoneInputsPlace.appendChild(taskZoneButton);
 
         taskZone.appendChild(taskZoneInputsPlace);
@@ -231,8 +232,20 @@ function displayTasks(number) {
         taskInput.classList.add('expanded')
     }
     taskZone.style.overflowY = 'scroll';
+}
 
-    console.log('click');
+function displayTasksList(number) {
+    const projectCard = document.getElementsByClassName('project_card')[number];
+    const taskZone = projectCard.querySelector('.task-container');
+    const taskInputField = projectCard.querySelector('.input-task');
+    const taskList = taskZone.querySelector('.task-list');
+
+    if(taskInputField.value != '') {
+        projectList.list[number].tasks.push(taskInputField.value);
+        taskInputField.value = ''
+    }
+
+    console.log(projectList.list[number].tasks)    
 }
 
 newProjectButton.addEventListener("click", newProject);
