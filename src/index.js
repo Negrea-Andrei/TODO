@@ -231,7 +231,6 @@ function displayTasks(number) {
         projectCard.classList.add('expanded');
         taskInput.classList.add('expanded')
     }
-    taskZone.style.overflowY = 'scroll';
 }
 
 function displayTasksList(number) {
@@ -240,11 +239,40 @@ function displayTasksList(number) {
     const taskInputField = projectCard.querySelector('.input-task');
     const taskList = taskZone.querySelector('.task-list');
 
+    taskList.classList.add('expanded')
+
     if(taskInputField.value != '') {
         projectList.list[number].tasks.push(taskInputField.value);
         taskInputField.value = ''
     }
 
+    taskList.innerHTML = '';
+    for(let i = 0; i < projectList.list[number].tasks.length; i++){
+        
+        const taskCard = document.createElement('li');
+        taskCard.className = 'element';
+        
+        const task = document.createElement('div');
+        task.className = "task-name";
+        task.innerHTML = projectList.list[number].tasks[i];
+
+        const buttons = document.createElement('div');
+
+        const done = document.createElement('button');
+        done.innerHTML = "Done";
+
+        const del = document.createElement('button');
+        del.innerHTML = "Delete";
+
+        buttons.appendChild(done);
+        buttons.appendChild(del);
+
+        taskCard.appendChild(task);
+        taskCard.appendChild(buttons);
+
+        taskList.appendChild(taskCard);
+    }
+    
     console.log(projectList.list[number].tasks)    
 }
 

@@ -169,7 +169,7 @@ p {
 }
 
 .project_card.expanded {
-    height: 300px;
+    height: max-content;
   }
 
 .project_card_header {
