@@ -237,6 +237,12 @@ function deletingTasks(index, number) {
     displayTasksList(number);
 }
 
+function strikeTrough(index, number) {
+    const taskNameElement = document.querySelectorAll('.task-name')[index];
+    taskNameElement.classList.toggle('striketrough');
+    displayTasksList(number);
+}
+
 function displayTasksList(number) {
     const projectCard = document.getElementsByClassName('project_card')[number];
     const taskZone = projectCard.querySelector('.task-container');
@@ -265,6 +271,7 @@ function displayTasksList(number) {
 
         const done = document.createElement('button');
         done.innerHTML = "Done";
+        done.addEventListener('click', () => strikeTrough(i, number) )
 
         const del = document.createElement('button');
         del.innerHTML = "Delete";
