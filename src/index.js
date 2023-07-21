@@ -240,7 +240,7 @@ function deletingTasks(index, number) {
 function strikeTrough(index, number) {
     const taskNameElement = document.querySelectorAll('.task-name')[index];
     taskNameElement.classList.toggle('striketrough');
-    displayTasksList(number);
+    setTimeout(() => {deletingTasks(index, number)}, 1500)
 }
 
 function displayTasksList(number) {

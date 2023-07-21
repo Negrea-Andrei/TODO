@@ -303,7 +303,7 @@ p {
     width: 50%;
 }
 
-.task-name .striketrough {
+.striketrough {
     text-decoration: line-through
 }
 
