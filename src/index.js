@@ -3,7 +3,9 @@ import welcome from "./home";
 
 const newProjectButton = document.querySelector(".new-project");
 const homePage = document.querySelector('.home');
-const projectDisplayButton = document.querySelector('.my-projects')
+const projectDisplayButton = document.querySelector('.my-projects');
+
+welcome()
 
 const projectList = {
     list: []
