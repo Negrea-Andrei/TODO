@@ -174,7 +174,7 @@ function displayProjects() {
         commands.appendChild(projectButton);
 
         deleteProjectButton.addEventListener('click', () => deletingProjects(i));
-        projectButton.addEventListener('click', () => displayTasks(i));
+        projectButton.addEventListener('click', () => seeTasks(i));
 
         const taskZone = document.createElement('div');
         taskZone.className = "task-container";
@@ -227,11 +227,14 @@ function displayTasks(number) {
 
     if (projectCard.classList.contains('expanded')) {
         projectCard.classList.remove('expanded');
-        taskInput.classList.remove('expanded')
+        taskInput.classList.remove('expanded');
+        taskZone.classList.remove('expanded');
     } else {
         projectCard.classList.add('expanded');
-        taskInput.classList.add('expanded')
+        taskInput.classList.add('expanded');
+        taskZone.classList.add('expanded');
     }
+    
 }
 
 function deletingTasks(index, number) {
@@ -242,7 +245,8 @@ function deletingTasks(index, number) {
 function strikeTrough(index, number) {
     const taskNameElement = document.querySelectorAll('.task-name')[index];
     taskNameElement.classList.toggle('striketrough');
-    setTimeout(() => {deletingTasks(index, number)}, 1500)
+    projectList.list[number].tasks.splice(index, 1);
+    setTimeout(() => {displayTasksList(number)}, 1500)
 }
 
 function displayTasksList(number) {
@@ -289,6 +293,11 @@ function displayTasksList(number) {
     }
     
     console.log(projectList.list[number].tasks)    
+}
+
+function seeTasks(number) {
+    displayTasks(number);
+    displayTasksList(number);
 }
 
 newProjectButton.addEventListener("click", newProject);

@@ -157,7 +157,7 @@ p {
     width: clamp(170px, 60%, 60%);
     border-radius: 15px;
     border: 2px solid #091540;
-    height: 200px;/*300px*/ 
+    height: fit-content;/*300px*/ 
     background-color: #69b2fc;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -236,7 +236,7 @@ p {
     height: fit-content;
     justify-content: space-around;
     background-color: #aed7ff;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 15px;
 }
 
@@ -272,9 +272,13 @@ p {
 
 .task-container {
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.task-container.expanded {
+    display: flex;
 }
 
 .commands {
