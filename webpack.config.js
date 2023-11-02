@@ -4,10 +4,10 @@ module.exports = {
     mode: 'development',
     devServer: {
         static: './dist',
-      },
+    },
     entry: './src/index.js',
     output: {
-        filename: 'main.js',
+        filename: 'index.js',
         path: path.resolve(__dirname, 'dist'),
     },
     devtool: 'inline-source-map',
