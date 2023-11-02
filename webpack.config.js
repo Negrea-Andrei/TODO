@@ -2,6 +2,9 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
+    devServer: {
+        static: './dist',
+      },
     entry: './src/index.js',
     output: {
         filename: 'main.js',
