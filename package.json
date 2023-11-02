@@ -5,11 +5,12 @@
   "private": true,
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack"  
+    "build": "webpack",
+    "deploy": "gh-pages -d dist"  
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Negrea-Andrei/TODO.git"
+    "url": "git+https://github.com/Negrea-Andrei/TODO"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "css-loader": "^6.8.1",
     "style-loader": "^3.3.3",
+    "gh-pages": "^6.0.0",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   }
