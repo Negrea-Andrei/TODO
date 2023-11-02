@@ -1,2 +1,2 @@
 # TODO
-This application will be a OTDO list made using HTML, CSS, JS and Webpack
+This application will be a TODO list made using HTML, CSS, JS and Webpack
