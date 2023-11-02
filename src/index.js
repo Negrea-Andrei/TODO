@@ -1,4 +1,5 @@
 import welcome from "./home";
+import "./stylesheet.css"
 
 
 const newProjectButton = document.querySelector(".new-project");
